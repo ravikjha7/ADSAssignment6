@@ -1,0 +1,6 @@
+dba.deploySandboxInstance('3330')
+shell.connect('root@localhost:3330')
+var cluster = dba.createCluster('vishal')
+cluster.status()
+cluster.addInstance('root@localhost:3331')
+cluster.status()
